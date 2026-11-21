@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+ENV/
+
+# Databases and Local Indexes
+*.db
+*.sqlite3
+*.pkl
+chroma_db/
+doc/
+
+# IDE & OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Agent working memory / scratch
+task_plan.md
+findings.md
+progress.md
