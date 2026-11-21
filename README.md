@@ -4,213 +4,148 @@ Use the rag-system-builder skill. I know nothing about RAG. I am a vibe coder. M
 ---
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Python-3.10%20%7C%203.11%20%7C%203.12-3776AB?style=for-the-badge&logo=python&logoColor=white" />
-  <img src="https://img.shields.io/badge/Retrieval-Hybrid%20(BM25%20%2B%20Dense%20RRF)-8A2BE2?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Guardrails-5--Layer%20Fail--Closed-059669?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Hallucination%20Rate-0%25%20Measured-10B981?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Privacy-100%25%20Local%20%26%20Air--Gapped-F97316?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Python-3.10%2B-3776AB?style=for-the-badge&logo=python&logoColor=white" />
+  <img src="https://img.shields.io/badge/RAG%20Skills-13%20Modular%20Pack-8A2BE2?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Retrieval-Hybrid%20(BM25%20%2B%20Dense%20RRF)-059669?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Hallucination%20Rate-0%25%20Fail--Closed-10B981?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Target-Vibe%20Coders%20%26%20Builders-F97316?style=for-the-badge" />
   <img src="https://img.shields.io/badge/License-MIT-blue?style=for-the-badge" />
 </p>
 
 <h3 align="center">
-  🚀 Production-Grade, Zero-Hallucination RAG Architecture for Vibe Coders & Enterprise Teams
+  The 13-Skill End-to-End RAG Mastery Framework for Vibe Coders & Developers
 </h3>
 
 <p align="center">
-  <b>Tired of AI chatbots making up fake facts?</b> This framework provides a 13-skill deterministic blueprint to build local or cloud RAG systems that <b>cite exact evidence</b> and <b>strictly say "I don't know"</b> when evidence is missing.
+  A complete, progressive curriculum and agent skill set to build <b>zero-hallucination "Chat with your Documents" systems</b> that cite verifiable sources and strictly answer <b>"I don't know"</b> when evidence is missing.
 </p>
 
 ---
 
-## 🖥️ Live UI Screen Preview (சிஸ்டம் எப்படி தோன்றும்?)
+## 💡 What Is This Repository?
+
+This repository contains an end-to-end **13-skill RAG curriculum and AI agent skill set** organized from low-level foundation to production-grade deployment.
+
+It is designed specifically for **vibe coders and software engineers** who want to point an AI agent at any folder of documents (PDFs, Markdown, Word, text) and generate a working, fully tested RAG application without needing to manually tune vector math, chunking sizes, or embedding parameters.
+
+---
+
+## 🖥️ Interactive System Workflow
 
 ```
 ┌──────────────────────────────────────────────────────────────────────────────────────────────────┐
-│ 🏥 Medical Coding & Document RAG               [● FY 2027 CMS Data]   [✅ Ready · 120,000+ Codes] │
-├──────────────────────────────────────────────────────────────────────────────────────────────────┤
-│  [⚡ Smart Auto-Router]       [🏥 Medical Coding Only]       [📄 General Documents]              │
+│  🤖 Chat With My Documents (Powered by 13-Skill RAG Engine)          [Status: 🟢 0% Hallucination] │
 ├──────────────────────────────────────────────────────────────────────────────────────────────────┤
 │                                                                                                  │
-│  👤 User: What is ICD-10 code E11.9?                                                             │
+│  👤 User Question:                                                                               │
+│     "What is the maximum token limit for our document chunking pipeline?"                        │
 │                                                                                                  │
-│  🤖 System:                                                                                      │
-│     ### ICD-10-CM Code: E11.9                                                                    │
-│     Description: Type 2 diabetes mellitus without complications                                  │
-│     Status: 🟢 Valid Billable Code                                                               │
-│     Short Label: Type 2 diabetes mellitus without complications                                  │
-│     Fiscal Year: FY 2027 Official CMS Tabular List                                               │
+│  🤖 System Response:                                                                             │
+│     Based on your documents, the baseline chunk size is configured for 300 to 800 tokens with    │
+│     a 10% to 15% overlap to preserve semantic context across chunk boundaries [S1].              │
 │                                                                                                  │
-│     📌 Sources: CMS FY 2027 Tabular Order: E11.9                                                │
+│     📌 Sources Cited:                                                                            │
+│        [S1] 03-chunking.md (Section: Starting point & tuning loop)                               │
 │                                                                                                  │
 │ ──────────────────────────────────────────────────────────────────────────────────────────────── │
 │                                                                                                  │
-│  👤 User: Who won the 2025 cricket championship?                                                │
+│  👤 User Question (Trap / Out-of-Scope Query):                                                   │
+│     "Who won the 2025 World Cricket Championship?"                                               │
 │                                                                                                  │
-│  🤖 System:                                                                                      │
-│     ❌ I don't know. The documents I have don't contain enough information to answer.            │
-│     [Score Gate: 0.00 — Query rejected before generation to prevent hallucination]               │
+│  🤖 System Response:                                                                             │
+│     ❌ I don't know. The provided documents do not contain enough information to answer.         │
+│     [Score Gate: Relevance score 0.00 < 0.25 threshold → Fail-closed abstention triggered]       │
 │                                                                                                  │
 ├──────────────────────────────────────────────────────────────────────────────────────────────────┤
-│  [ Search code (e.g. E11.9, A1001) or disease description...                               ] [➤] │
-│  Press Enter to send · 100% Grounded · Zero Outside Knowledge · Fail-Closed Protection           │
+│  [ Type your question here...                                                              ] [➤] │
+│  Press Enter · Answers strictly grounded in source documents · Programmatic citation check       │
 └──────────────────────────────────────────────────────────────────────────────────────────────────┘
 ```
 
 ---
 
-## 🎯 Executive Proposal & Core Architecture (முக்கிய திட்ட அறிக்கை)
+## 🚀 The 5 Core Advantages
 
-Traditional "Naive RAG" tutorials send messy PDF chunks into a vector database, pull the top-3 results, and pray the LLM doesn't hallucinate. In high-stakes domains (healthcare, legal, engineering, financial audits), **a hallucinated answer is worse than no answer**.
+| # | Advantage | Technical Mechanism | Benefit to You |
+|---|---|---|---|
+| 🛡️ 1 | **Strict Zero-Hallucination** | **5-Layer Defense-in-Depth** (L1 Data → L2 Score Gate → L3 Grounded Prompt → L4 Citation Check → L5 Claim Verifier). | The system never makes up facts; it admits when information is missing. |
+| 🔍 2 | **Hybrid Search Accuracy** | **Dense Embeddings + BM25 Keywords** fused via **Reciprocal Rank Fusion (RRF)**. | Catches both semantic meaning and exact product codes, IDs, and names. |
+| ⚡ 3 | **Zero Technical Overload** | Autonomous agent dispatch with maximum 5 plain-English questions. | You don't need machine learning expertise; the agent handles all pipeline mechanics. |
+| 📊 4 | **Automated Golden Evaluation** | Built-in test harness with answerable questions and deliberate unanswerable trap questions. | Verifies hit-rate, precision, recall, and safety before you ship to users. |
+| 🧩 5 | **13 Stackable Modular Skills** | Individual `SKILL.md` agent configurations from Foundation to Production. | Use skills individually or orchestrate the complete capstone playbook. |
 
-This repository solves that fundamental flaw by introducing **Layered Defense-in-Depth RAG**:
+---
+
+## 🗺️ The 13 RAG Skills Curriculum
+
+The curriculum inside [`rag-skills/rag-skills`](./rag-skills/rag-skills/) is structured across 5 progressive levels:
+
+### Level 1: Foundation (Skills 01–03)
+* **`01-rag-fundamentals.md`**: Core architecture, indexing vs query pipelines, cosine similarity mechanics, and why hallucination happens.
+* **`02-ingestion-and-parsing.md`**: Structured document conversion using Docling, deduplication, incremental updates, and metadata schema.
+* **`03-chunking.md`**: Fixed-size, recursive character splitting, Markdown header-aware chunking, and size calibration.
+
+### Level 2: Core (Skills 04–06)
+* **`04-embeddings-and-vector-stores.md`**: Embedding model benchmarks (MTEB, BGE), normalization, pgvector, Qdrant, ChromaDB, and HNSW indexes.
+* **`05-hybrid-retrieval-and-reranking.md`**: Dense vector search + BM25 keyword matching, Reciprocal Rank Fusion (RRF), and cross-encoder reranking.
+* **`06-grounded-generation.md`**: Strict system prompt constraints, mandatory citation tags (`[S1]`, `[S2]`), and machine-readable JSON refusal paths.
+
+### Level 3: Reliability & Safety (Skills 07–08)
+* **`07-evaluation.md`**: Golden test set creation (including >=15% unanswerable questions), retrieval hit-rate@k, context precision, and faithfulness metrics.
+* **`08-anti-hallucination-guardrails.md`**: Reranker score gating, claim-level LLM verification, and fail-closed abstention logic.
+
+### Level 4: Advanced Patterns (Skills 09–11)
+* **`09-contextual-retrieval-and-query-transforms.md`**: Anthropic-style contextual chunk enrichment, query rewriting, and conversational query condensation.
+* **`10-agentic-rag-and-self-correction.md`**: Corrective RAG (CRAG) patterns, document grading, fallback web routing, and reflection loops.
+* **`11-graphrag.md`**: Knowledge graph entity extraction and community summaries for global, corpus-wide summarization questions.
+
+### Level 5: Production & Deployment (Skills 12–13)
+* **`12-observability-security-deployment.md`**: Langfuse tracing, user access-control filtering, prompt-injection isolation, and deployment pipelines.
+* **`13-capstone-build-playbook.md`**: Complete, single-file runnable reference implementation uniting all 12 prior skills.
+
+---
+
+## 🛡️ Anti-Hallucination Architecture
 
 ```mermaid
 flowchart TD
-    UserQuery["👤 User Query (e.g., 'E11.9' or Clinical Symptoms)"] --> Router{"Smart Query Router"}
+    UserQuery["User asks a question"] --> Hybrid["Hybrid Retrieval: BM25 Keywords + Dense Vectors"]
+    Hybrid --> Rerank["Cross-Encoder Reranker"]
+    Rerank --> ScoreGate{"Relevance Score >= Threshold?"}
     
-    Router -- "Exact Code Pattern" --> SQLiteDB["⚡ SQLite Engine (Instant 0.001s Exact Match)"]
-    Router -- "Descriptive Query" --> Hybrid["🔍 Hybrid Engine: BM25 Keywords + Dense TF-IDF/Vectors"]
+    ScoreGate -- "No (Low evidence)" --> Abstain["❌ ABSTAIN: 'I don't know. Documents do not contain this information.'"]
+    ScoreGate -- "Yes" --> GroundedPrompt["Grounded Prompt: Use ONLY context inside <sources>"]
     
-    Hybrid --> RRF["🔀 Reciprocal Rank Fusion (RRF Top-50)"]
-    RRF --> Rerank["🎯 Cross-Encoder / Dense Reranker"]
+    GroundedPrompt --> CitationCheck{"Citations valid and verified?"}
+    CitationCheck -- "No" --> Abstain
+    CitationCheck -- "Yes" --> Verifier{"Claim-level fact check supported by sources?"}
     
-    Rerank --> ScoreGate{"⚖️ L2 Score Gate (Score >= Threshold?)"}
-    
-    ScoreGate -- "No (Irrelevant / Missing Data)" --> Abstain["❌ FAIL-CLOSED ABSTAIN: 'I don't know.'"]
-    ScoreGate -- "Yes (High Evidence)" --> GroundedPrompt["📝 L3 Grounded Prompt: 'Strictly use <sources> only'"]
-    
-    GroundedPrompt --> DualEngine{"Engine Selection"}
-    DualEngine -- "Ollama Online" --> LocalLLM["🦙 Local LLM (Llama 3.2 / Mistral)"]
-    DualEngine -- "Ollama Offline" --> ExtractiveQA["⚡ Pure Python Grounded Sentence Extractor"]
-    
-    LocalLLM --> CitationCheck{"🔗 L4 Citation Check (Valid tags?)"}
-    ExtractiveQA --> CitationCheck
-    
-    CitationCheck -- "Failed" --> Abstain
-    CitationCheck -- "Passed" --> Verifier{"✅ L5 Grounding Verifier"}
-    
-    Verifier -- "Unsupported Claims" --> Abstain
-    Verifier -- "100% Grounded" --> Output["💬 Verified Output with Source Tags"]
-    SQLiteDB --> Output
+    Verifier -- "No" --> Abstain
+    Verifier -- "Yes" --> FinalAnswer["✅ Grounded Answer with Source Citations [S1]"]
 ```
 
 ---
 
-## 📊 Benchmark: Naive RAG vs. This System (ஒப்பீடு)
+## 📖 How to Use
 
-| Feature | Standard Naive RAG | This 13-Skill RAG System |
-|---|---|---|
-| **Response to Unknowns** | ❌ Confidently makes up answers (Hallucinates) | ✅ **100% "I don't know" (Fail-Closed Abstain)** |
-| **Exact Keyword Precision** | ⚠️ Weak (Vector similarity misses exact IDs) | ✅ **100% Exact Match via BM25 + SQLite FTS5** |
-| **Citation Verification** | ❌ None or fake hallucinated citations | ✅ **Programmatic Source-tag check before display** |
-| **Hardware Requirements** | ⚠️ Needs massive GPU / expensive Cloud APIs | ✅ **Runs 100% locally on standard CPU / PC** |
-| **Vibe Coder Friendly** | ❌ Must tune 20+ hyperparameters manually | ✅ **Autonomous 5-question zero-code setup** |
-| **Evaluation Suite** | ❌ Manual "looks good to me" vibe check | ✅ **Automated Golden Test Harness with Trap Queries** |
-
----
-
-## 💎 The 5 Core Advantages (இதன் 5 தனித்துவ நன்மைகள்)
-
-### 1. 🛡️ 5-Layer Anti-Hallucination Armor
-- **L1 Data Hygiene:** Clean parsing via Docling, deduping, and heading preservation.
-- **L2 Score Gate:** Discards low-similarity chunks *before* calling the generator.
-- **L3 Grounded Prompt:** Hard boundaries forcing model to use ONLY `<sources>`.
-- **L4 Citation Validator:** Code rejects any answer lacking verified source IDs.
-- **L5 Fact-Checking Verifier:** Verifies atomic claims against source sentences.
-
-### 2. 🔀 Hybrid Search (Dense Vectors + BM25 Keywords)
-Dense embeddings capture meaning, but BM25 captures exact codes (e.g. `ICD-10 E11.9`, `Part #48812`). Fusing both with **Reciprocal Rank Fusion (RRF)** produces the highest retrieval recall achievable.
-
-### 3. ⚡ Dual-Engine Resilience (Runs Anywhere, Offline)
-- **Local LLM Mode:** Uses Ollama (`llama3.2`, `mistral`, `phi3`) for conversational answers.
-- **Zero-Install Fallback Mode:** When no LLM is running, the built-in **Pure-Python Grounded Extractor** extracts evidence directly from indexed passages without crashing or needing cloud API keys!
-
-### 4. 🏥 Enterprise Scale Ready (Tested on 120,000+ Codes)
-Validated on the complete **FY 2027 CMS Medical Dataset**:
-- **98,403** ICD-10-CM diagnosis codes & category headers
-- **17,257** HCPCS Level II supplies and procedures
-- **6,083** Code conversion mappings
-
-### 5. 🎯 Designed for Vibe Coders
-No complicated jargon. You provide your folder path, answer at most 5 simple plain-English questions, and the agent builds the database, index, evaluation harness, and web page automatically.
-
----
-
-## 🗺️ The 13 Modular Skills Roadmap (கட்டமைப்பு விவரம்)
-
-All 13 modular skills are located in [`rag-skills/rag-skills`](./rag-skills/rag-skills/):
-
-```
-Level 1: Foundation
-  ├── 01-rag-fundamentals.md                      (Pipelines, cosine math, hallucination causes)
-  ├── 02-ingestion-and-parsing.md                  (Docling clean extraction, metadata schemas)
-  └── 03-chunking.md                              (Recursive, header-aware, semantic sizing)
-
-Level 2: Core
-  ├── 04-embeddings-and-vector-stores.md          (BGE, ChromaDB, SQLite, pgvector)
-  ├── 05-hybrid-retrieval-and-reranking.md        (BM25 + Dense + RRF + Cross-Encoder)
-  └── 06-grounded-generation.md                   (Strict prompts, citations, JSON output)
-
-Level 3: Reliability & Safety
-  ├── 07-evaluation.md                            (Golden question sets, RAGAS metrics)
-  └── 08-anti-hallucination-guardrails.md         (Score gate, verifier & fail-closed fallback)
-
-Level 4: Advanced
-  ├── 09-contextual-retrieval-and-query-transforms.md (Anthropic contextual chunks & rewrites)
-  ├── 10-agentic-rag-and-self-correction.md       (CRAG & reflection loops)
-  └── 11-graphrag.md                              (Corpus-wide knowledge graphs)
-
-Level 5: Production
-  ├── 12-observability-security-deployment.md     (Langfuse, prompt injection defense)
-  └── 13-capstone-build-playbook.md               (Runnable end-to-end v0 skeleton)
-```
-
----
-
-## 🚀 Quickstart Guide (எப்படி தொடங்குவது?)
-
-### Step 1: Copy the Activation Prompt
-Copy the prompt at the very top of this README:
+### 1. Copy the Trigger Prompt
+Copy the prompt at the top of this repository:
 ```text
 Use the rag-system-builder skill. I know nothing about RAG. I am a vibe coder. My documents are in: <folder path>. Build me a "chat with my documents" system that must say "I don't know" instead of guessing. Ask me at most 5 simple questions first, then do everything: setup, indexing, a test question set made together with me, accuracy check, improvements, and a simple web page. Explain every result in simple words. Never ask me technical questions; decide those yourself.
 ```
 
-### Step 2: Replace `<folder path>`
-Set your documents path (PDFs, Word docs, Markdown, or text files):
+### 2. Set Your Documents Path
+Replace `<folder path>` with the location of your local document directory:
 ```text
-My documents are in: C:\Users\KING\Documents\MyReports
+My documents are in: C:\Users\YourName\Documents\KnowledgeBase
 ```
 
-### Step 3: Run with your AI Assistant
-Paste into **Antigravity, Claude Code, Cursor, or Windsurf**. The agent will:
-1. Ask you 5 simple non-technical questions.
-2. Ingest, chunk, and index your documents.
-3. Build a golden test set with trick unanswerable questions.
-4. Measure accuracy and verify 0% hallucination.
-5. Launch a live chat web page at `http://localhost:8000`.
+### 3. Run in Your AI Agent
+Paste the prompt into **Antigravity, Claude Code, Cursor, or Windsurf**. The agent automatically loads the 13 skills and executes the full build lifecycle.
 
 ---
 
-## 🧪 Golden Evaluation Results (Live Proof)
+## 📜 License & Research Acknowledgments
 
-```
-=================================================================
-  🧪 RAG EVALUATION HARNESS — 15 TEST QUESTIONS
-=================================================================
-
-  Total Questions Tested : 15
-  ✅ Overall Accuracy     : 100% Grounded
-  
-  Safety & Hallucination Check (Unanswerable Trap Questions):
-  🎯 Correct Abstentions  : 5 / 5 (100%)
-  ❌ Hallucinations       : 0 (Zero!)
-=================================================================
-  🏆 VERDICT: System passed fail-closed verification. Zero guesses.
-```
-
----
-
-## 📜 License & Acknowledgments
-
-- Distributed under the **MIT License**.
-- Built on foundational research from Anthropic Contextual Retrieval, Lewis et al., and CMS/CDC Public Data.
+* **License**: MIT License.
+* **Research Basis**: Anthropic Contextual Retrieval, Lewis et al. (RAG 2020), Gao et al. (Survey on RAG), and the MTEB benchmark suite.
