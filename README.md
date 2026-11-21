@@ -1,0 +1,2 @@
+# RAG SYSTEM WITH VIBE CODE SKILLS
+Use the rag-system-builder skill. I know nothing about RAG. I am a vibe coder. My documents are in: <folder path>. Build me a "chat with my documents" system that must say "I don't know" instead of guessing. Ask me at most 5 simple questions first, then do everything: setup, indexing, a test question set made together with me, accuracy check, improvements, and a simple web page. Explain every result in simple words. Never ask me technical questions; decide those yourself.
